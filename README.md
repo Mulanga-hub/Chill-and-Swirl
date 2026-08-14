@@ -15,16 +15,20 @@ Chill & Swirl is a fictional South African ice cream business based in Pretoria.
 
 The website is designed to provide a simple, informative and easy-to-navigate online presence for Chill & Swirl.
 
+---
+
 ## Website Goals and Objectives
 
 The main goals of the website are to:
 
 - Provide customers with information about Chill & Swirl.
-- Display the available ice cream products, flavours and prices.
+- Display available ice cream products, flavours and prices.
 - Provide information about the business and its locations.
 - Allow customers to submit product and general enquiries.
 - Provide contact information and operating hours.
 - Create a clear and user-friendly website structure.
+
+---
 
 ## Target Audience
 
@@ -36,9 +40,9 @@ The target audience includes:
 - Local community members
 - Ice cream and dessert customers
 
-## Website Pages
+---
 
-The website currently contains five main HTML pages:
+## Website Pages
 
 | Page | File | Purpose |
 |---|---|---|
@@ -47,6 +51,8 @@ The website currently contains five main HTML pages:
 | Menu | `menu.html` | Displays ice cream flavours, products, prices and signature items. |
 | Inquiry | `inquiry.html` | Allows visitors to submit questions, product enquiries and special requests. |
 | Contact | `contact.html` | Provides locations, contact information, operating hours and a contact form. |
+
+---
 
 ## Key Features and Functionality
 
@@ -64,6 +70,8 @@ The current website includes:
 - Social media information.
 - Semantic HTML structure.
 - Comments within the HTML code.
+
+---
 
 ## File and Folder Structure
 
@@ -85,6 +93,8 @@ Chill-and-Swirl/
 │
 └── images/
     ├── graphics/
+    │   └── chill-and-swirl-logo.png
     ├── products/
+    │   └── chill-and-swirl-hero.png
     ├── team/
     └── store/
