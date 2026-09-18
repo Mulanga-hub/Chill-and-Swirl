@@ -5,21 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Chill & Swirl Ice Cream</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
 
     <!-- Header -->
-    <header>
+    <header class="site-header">
 
         <!-- Chill & Swirl logo -->
-        <img src="images/graphics/chill-and-swirl-logo.png"
+        <img class="logo"
+             src="images/graphics/chill-and-swirl-logo.png"
              alt="Chill & Swirl Ice Cream logo">
 
         <h1>Chill & Swirl Ice Cream</h1>
 
         <!-- Navigation menu -->
-        <nav>
+        <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="menu.html">Menu</a>
@@ -33,64 +35,86 @@
     <main>
 
         <!-- Hero section -->
-        <section>
-            <h2>Welcome to Chill & Swirl</h2>
+        <section class="hero">
 
-            <!-- Hero image -->
-            <img src="images/products/chill-and-swirl-hero.png"
-                 alt="Chill & Swirl ice cream products">
+            <div class="hero-content">
 
-            <h2>Melt into flavour.</h2>
+                <h2>Welcome to Chill & Swirl</h2>
 
-            <p>
-                Welcome to Chill & Swirl Ice Cream, a modern South African
-                ice cream business bringing refreshing and affordable treats
-                to Pretoria.
-            </p>
+                <!-- Hero image -->
+                <img class="hero-image"
+                     src="images/products/chill-and-swirl-hero.png"
+                     alt="Chill & Swirl ice cream products">
 
-            <p>
-                Discover delicious flavours, creative desserts and our
-                signature ice cream creations made for students, workers,
-                families and anyone who loves ice cream.
-            </p>
+                <h2>Melt into flavour.</h2>
 
-            <a href="menu.html">Discover Our Menu</a>
-            <a href="inquiry.html">Make an Inquiry</a>
+                <p>
+                    Welcome to Chill & Swirl Ice Cream, a modern South African
+                    ice cream business bringing refreshing and affordable treats
+                    to Pretoria.
+                </p>
+
+                <p>
+                    Discover delicious flavours, creative desserts and our
+                    signature ice cream creations made for students, workers,
+                    families and anyone who loves ice cream.
+                </p>
+
+                <div class="button-group">
+                    <a class="button" href="menu.html">Discover Our Menu</a>
+
+                    <a class="button secondary-button"
+                       href="inquiry.html">
+                        Make an Inquiry
+                    </a>
+                </div>
+
+            </div>
+
         </section>
 
         <!-- Featured product -->
-        <section>
+        <section class="content-section featured">
+
             <h2>Our Signature Creation</h2>
 
-            <h3>Chill & Swirl Chocolate Croissant</h3>
+            <article class="feature-card">
 
-            <p>
-                Experience our signature warm croissant creation filled
-                with delicious chocolate ice cream. It combines a warm,
-                crispy pastry with a cool and creamy centre for a unique
-                Chill & Swirl experience.
-            </p>
+                <h3>Chill & Swirl Chocolate Croissant</h3>
 
-            <p>
-                <strong>Price:</strong> R45
-            </p>
+                <p>
+                    Experience our signature warm croissant creation filled
+                    with delicious chocolate ice cream. It combines a warm,
+                    crispy pastry with a cool and creamy centre for a unique
+                    Chill & Swirl experience.
+                </p>
+
+                <p>
+                    <strong>Price:</strong> R45
+                </p>
+
+            </article>
+
         </section>
 
         <!-- Why choose us -->
-        <section>
+        <section class="content-section">
+
             <h2>Why Choose Chill & Swirl?</h2>
 
-            <ul>
+            <ul class="benefits-list">
                 <li>Affordable ice cream from as little as R15.</li>
                 <li>A wide variety of exciting flavours.</li>
                 <li>Creative desserts and signature creations.</li>
                 <li>Suitable for everyone.</li>
                 <li>Convenient locations in Pretoria.</li>
             </ul>
+
         </section>
 
         <!-- Visit us -->
-        <section>
+        <section class="content-section visit-section">
+
             <h2>Visit Us</h2>
 
             <p>
@@ -98,13 +122,17 @@
                 second location in Sunnyside.
             </p>
 
-            <a href="contact.html">View Our Locations</a>
+            <a class="button" href="contact.html">
+                View Our Locations
+            </a>
+
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="site-footer">
+
         <p>
             &copy; 2026 Chill & Swirl Ice Cream. All rights reserved.
         </p>
@@ -112,6 +140,7 @@
         <p>
             Instagram | TikTok
         </p>
+
     </footer>
 
 </body>
