@@ -1,0 +1,510 @@
+/* ========================================
+   CHILL & SWIRL ICE CREAM
+   Part 2 - CSS Styling and Responsive Design
+   ======================================== */
+
+
+/* ========================================
+   1. CSS RESET
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   2. BASE STYLES
+   ======================================== */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #fff8fc;
+}
+
+
+/* ========================================
+   3. HEADER
+   ======================================== */
+
+header {
+    background-color: #f7c6d9;
+    padding: 1.5rem 5%;
+    text-align: center;
+    border-bottom: 3px solid #e89ab8;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+header h1 {
+    color: #7a2451;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ========================================
+   4. NAVIGATION
+   ======================================== */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    background-color: #a83268;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #7a2451;
+    transform: translateY(-2px);
+}
+
+nav a:focus {
+    outline: 3px solid #7a2451;
+    outline-offset: 2px;
+}
+
+nav a:active {
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   5. MAIN CONTENT
+   ======================================== */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+main section {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   6. HEADINGS
+   ======================================== */
+
+h2 {
+    color: #a83268;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #7a2451;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+
+/* ========================================
+   7. PARAGRAPHS AND TEXT
+   ======================================== */
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+strong {
+    color: #7a2451;
+}
+
+
+/* ========================================
+   8. HOME PAGE HERO IMAGE
+   ======================================== */
+
+main section:first-child img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 0.8rem;
+}
+
+
+/* ========================================
+   9. LINKS AND BUTTON-STYLE LINKS
+   ======================================== */
+
+main a {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #a83268;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    margin: 0.4rem 0.4rem 0.4rem 0;
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+main a:hover {
+    background-color: #7a2451;
+    transform: translateY(-2px);
+}
+
+main a:focus {
+    outline: 3px solid #7a2451;
+    outline-offset: 2px;
+}
+
+main a:active {
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   10. LISTS
+   ======================================== */
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.6rem;
+}
+
+
+/* ========================================
+   11. ARTICLES
+   ======================================== */
+
+article {
+    background-color: #fff1f6;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-left: 5px solid #e89ab8;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ========================================
+   12. MENU LAYOUT
+   ======================================== */
+
+main section:nth-child(2) article,
+main section:nth-child(3) article,
+main section:nth-child(4) article {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    margin-right: 2%;
+}
+
+main section:nth-child(2) article:nth-child(3n),
+main section:nth-child(3) article:nth-child(3n),
+main section:nth-child(4) article:nth-child(3n) {
+    margin-right: 0;
+}
+
+
+/* ========================================
+   13. FORMS
+   ======================================== */
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    color: #7a2451;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333333;
+    background-color: #ffffff;
+    border: 2px solid #e0b5c7;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #a83268;
+    box-shadow: 0 0 0 3px rgba(168, 50, 104, 0.15);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+
+/* ========================================
+   14. FORM BUTTONS
+   ======================================== */
+
+button {
+    background-color: #a83268;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #7a2451;
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: 3px solid #7a2451;
+    outline-offset: 2px;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   15. FOOTER
+   ======================================== */
+
+footer {
+    background-color: #7a2451;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 5%;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+
+/* ========================================
+   16. TABLET RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 1.5rem 4%;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        gap: 0.7rem;
+    }
+
+    nav a {
+        padding: 0.55rem 0.85rem;
+    }
+
+    main {
+        width: 92%;
+        padding: 2rem 0;
+    }
+
+    main section {
+        padding: 1.5rem;
+    }
+
+    main section:nth-child(2) article,
+    main section:nth-child(3) article,
+    main section:nth-child(4) article {
+        width: 47%;
+        margin-right: 2%;
+    }
+
+    main section:nth-child(2) article:nth-child(3n),
+    main section:nth-child(3) article:nth-child(3n),
+    main section:nth-child(4) article:nth-child(3n) {
+        margin-right: 2%;
+    }
+
+    main section:nth-child(2) article:nth-child(2n),
+    main section:nth-child(3) article:nth-child(2n),
+    main section:nth-child(4) article:nth-child(2n) {
+        margin-right: 0;
+    }
+
+}
+
+
+/* ========================================
+   17. MOBILE RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    header {
+        padding: 1.2rem 3%;
+    }
+
+    header img {
+        width: 90px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 0.65rem;
+    }
+
+    main {
+        width: 94%;
+        padding: 1.5rem 0;
+    }
+
+    main section {
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    main section:first-child img {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    main section:nth-child(2) article,
+    main section:nth-child(3) article,
+    main section:nth-child(4) article {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    article {
+        padding: 1.2rem;
+    }
+
+    main a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 1.5rem 4%;
+    }
+
+}
+
+
+/* ========================================
+   18. SMALL MOBILE DEVICES
+   ======================================== */
+
+@media (max-width: 400px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    main {
+        width: 96%;
+    }
+
+    main section {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+}
