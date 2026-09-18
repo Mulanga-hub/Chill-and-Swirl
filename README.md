@@ -123,8 +123,13 @@ Chill-and-Swirl/
 ├── JS/
 │   └── script.js
 │
-└── images/
-    ├── graphics/
-    ├── products/
-    ├── store/
-    └── team/
+├── images/
+│   ├── graphics/
+│   ├── products/
+│   ├── store/
+│   └── team/
+│
+└── screenshots/
+    ├── desktop-view.png
+    ├── tablet-view.png
+    └── mobile-view.png
