@@ -1,79 +1,111 @@
-# Chill & Swirl Ice Cream Website
-
-## Student Information
-
-**Student Name:** Mulanga R  
-**Project:** Chill & Swirl Ice Cream Website  
-**Module:** Web Development  
-**Part:** Part 1
-
----
+# Chill & Swirl Ice Cream
 
 ## Project Overview
 
-Chill & Swirl is a fictional South African ice cream business based in Pretoria. The website is being developed to provide customers with information about the business, its products, locations, operating hours and ways to contact the business.
+Chill & Swirl Ice Cream is a fictional South African ice cream business website created for a web development project.
 
-The website is designed to provide a simple, informative and easy-to-navigate online presence for Chill & Swirl.
+The business is based in Pretoria, Gauteng, with a main location in Pretoria Central and a second location in Sunnyside.
 
----
+The website is designed to provide customers with information about the business, its products, locations, operating hours and enquiry options.
 
-## Website Goals and Objectives
+## Website Goals
 
 The main goals of the website are to:
 
-- Provide customers with information about Chill & Swirl.
-- Display available ice cream products, flavours and prices.
-- Provide information about the business and its locations.
-- Allow customers to submit product and general enquiries.
-- Provide contact information and operating hours.
-- Create a clear and user-friendly website structure.
-
----
+- Introduce Chill & Swirl Ice Cream to customers.
+- Present the company's story, mission and vision.
+- Display the available ice cream flavours, desserts and signature products.
+- Provide customers with an inquiry form.
+- Provide contact information and store locations.
+- Create a simple, attractive and user-friendly website.
+- Ensure that the website works across desktop, tablet and mobile screen sizes.
 
 ## Target Audience
 
-The target audience includes:
+The website is designed for:
 
 - Students
-- Families
 - Workers
-- Local community members
-- Ice cream and dessert customers
-
----
+- Families
+- Local Pretoria residents
+- Visitors
+- Customers who enjoy ice cream and desserts
 
 ## Website Pages
 
-| Page | File | Purpose |
-|---|---|---|
-| Home | `index.html` | Introduces Chill & Swirl and highlights the business and signature product. |
-| About Us | `about.html` | Provides the company's story, mission, vision and team information. |
-| Menu | `menu.html` | Displays ice cream flavours, products, prices and signature items. |
-| Inquiry | `inquiry.html` | Allows visitors to submit questions, product enquiries and special requests. |
-| Contact | `contact.html` | Provides locations, contact information, operating hours and a contact form. |
+The website contains five main pages:
 
----
+### Home Page
 
-## Key Features and Functionality
+The Home page introduces Chill & Swirl Ice Cream and includes:
 
-The current website includes:
+- Business introduction
+- Hero image
+- Signature product
+- Reasons to choose Chill & Swirl
+- Store location information
+- Links to the Menu, Inquiry and Contact pages
 
-- Five linked HTML pages.
-- A consistent navigation menu.
-- Chill & Swirl branding and logo.
-- Homepage hero image.
-- Product and price information.
-- Inquiry form.
-- Contact form.
-- Two business locations.
-- Operating hours.
-- Social media information.
-- Semantic HTML structure.
-- Comments within the HTML code.
+### About Us Page
 
----
+The About Us page provides information about:
+
+- The business
+- The company story
+- Mission
+- Vision
+- Team members
+
+### Menu Page
+
+The Menu page displays:
+
+- Ice cream flavours
+- Cones and cups
+- Special desserts
+- Signature product
+- Sharing treat
+- Ordering information
+
+### Inquiry Page
+
+The Inquiry page provides a form that allows customers to submit:
+
+- Full name
+- Email address
+- Telephone number
+- Inquiry type
+- Product selection
+- Quantity
+- Message or special request
+
+### Contact Page
+
+The Contact page provides:
+
+- Pretoria Central location
+- Sunnyside location
+- Telephone number
+- Email address
+- Operating hours
+- Social media information
+- Location map information
+- Contact form
+
+## Technologies Used
+
+The website was developed using:
+
+- HTML5
+- CSS3
+- JavaScript
+- GitHub
+- Visual Studio Code
+- Browser Developer Tools
 
 ## File and Folder Structure
+
+The project is organised into separate files and folders to make the website easier to maintain.
 
 ```text
 Chill-and-Swirl/
@@ -93,8 +125,6 @@ Chill-and-Swirl/
 │
 └── images/
     ├── graphics/
-    │   └── chill-and-swirl-logo.png
     ├── products/
-    │   └── chill-and-swirl-hero.png
-    ├── team/
-    └── store/
+    ├── store/
+    └── team/
