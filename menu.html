@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the delicious ice cream flavours, cones, desserts and signature treats at Chill & Swirl Ice Cream in Pretoria.">
     <title>Menu | Chill & Swirl Ice Cream</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
@@ -12,8 +13,6 @@
 
     <!-- Header -->
     <header>
-
-        <!-- Chill & Swirl logo -->
         <img src="images/graphics/chill-and-swirl-logo.png"
              alt="Chill & Swirl Ice Cream logo">
 
@@ -27,7 +26,6 @@
             <a href="inquiry.html">Inquiry</a>
             <a href="contact.html">Contact</a>
         </nav>
-
     </header>
 
     <!-- Main content -->
@@ -42,6 +40,27 @@
                 desserts and signature treats. We offer affordable options
                 starting from R15.
             </p>
+        </section>
+
+        <!-- Interactive image gallery -->
+        <section>
+            <h2>Our Ice Cream Gallery</h2>
+
+            <p>
+                Take a closer look at one of our Chill & Swirl creations.
+                Click the image to view it in a larger size.
+            </p>
+
+            <div class="gallery">
+                <button type="button"
+                        class="gallery-trigger"
+                        id="openLightbox"
+                        aria-label="View Chill and Swirl ice cream image">
+
+                    <img src="images/product/chill-and-swirl-hero.png"
+                         alt="Chill & Swirl signature ice cream creation">
+                </button>
+            </div>
         </section>
 
         <!-- Ice Cream Flavours -->
@@ -87,7 +106,6 @@
                 </p>
                 <p><strong>From R25</strong></p>
             </article>
-
         </section>
 
         <!-- Cones and Cups -->
@@ -111,7 +129,6 @@
                 <p>A convenient cup with your choice of flavours.</p>
                 <p><strong>From R20</strong></p>
             </article>
-
         </section>
 
         <!-- Desserts -->
@@ -120,9 +137,7 @@
 
             <article>
                 <h3>Sundae</h3>
-                <p>
-                    Ice cream topped with delicious sauces and toppings.
-                </p>
+                <p>Ice cream topped with delicious sauces and toppings.</p>
                 <p><strong>From R30</strong></p>
             </article>
 
@@ -137,20 +152,15 @@
 
             <article>
                 <h3>Ice Cream Waffle</h3>
-                <p>
-                    Warm waffle served with creamy ice cream and toppings.
-                </p>
+                <p>Warm waffle served with creamy ice cream and toppings.</p>
                 <p><strong>From R40</strong></p>
             </article>
 
             <article>
                 <h3>Ice Cream Sandwich</h3>
-                <p>
-                    Delicious ice cream served between sweet biscuit layers.
-                </p>
+                <p>Delicious ice cream served between sweet biscuit layers.</p>
                 <p><strong>From R35</strong></p>
             </article>
-
         </section>
 
         <!-- Signature Product -->
@@ -167,11 +177,8 @@
                     experience.
                 </p>
 
-                <p>
-                    <strong>Price: R45</strong>
-                </p>
+                <p><strong>Price: R45</strong></p>
             </article>
-
         </section>
 
         <!-- Sharing Treat -->
@@ -184,9 +191,7 @@
                 and our signature flavours.
             </p>
 
-            <p>
-                <strong>Price: R100</strong>
-            </p>
+            <p><strong>Price: R100</strong></p>
         </section>
 
         <!-- Ordering -->
@@ -203,12 +208,28 @@
 
     </main>
 
+    <!-- Image lightbox -->
+    <div id="imageLightbox" class="lightbox" hidden>
+
+        <button type="button"
+                id="closeLightbox"
+                class="lightbox-close"
+                aria-label="Close image">
+            &times;
+        </button>
+
+        <img src="images/product/chill-and-swirl-hero.png"
+             alt="Enlarged view of the Chill & Swirl ice cream creation">
+
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Chill & Swirl Ice Cream. All rights reserved.</p>
         <p>Instagram | TikTok</p>
     </footer>
 
-</body>
+    <script src="JS/script.js"></script>
 
+</body>
 </html>
