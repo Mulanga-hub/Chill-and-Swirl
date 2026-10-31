@@ -1,24 +1,16 @@
 /* ========================================
    CHILL & SWIRL ICE CREAM
-   Part 2 - CSS Styling and Responsive Design
+   Part 3 - CSS Styling and Responsive Design
    ======================================== */
 
-
-/* ========================================
-   1. CSS RESET
-   ======================================== */
-
+/* 1. CSS RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* ========================================
-   2. BASE STYLES
-   ======================================== */
-
+/* 2. BASE STYLES */
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -32,11 +24,7 @@ body {
     background-color: #fff8fc;
 }
 
-
-/* ========================================
-   3. HEADER
-   ======================================== */
-
+/* 3. HEADER */
 header {
     background-color: #f7c6d9;
     padding: 1.5rem 5%;
@@ -58,11 +46,7 @@ header h1 {
     margin-bottom: 1rem;
 }
 
-
-/* ========================================
-   4. NAVIGATION
-   ======================================== */
-
+/* 4. NAVIGATION */
 nav {
     display: flex;
     justify-content: center;
@@ -78,8 +62,7 @@ nav a {
     font-weight: 600;
     padding: 0.6rem 1rem;
     border-radius: 0.4rem;
-    transition: background-color 0.3s ease,
-                transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
@@ -96,11 +79,7 @@ nav a:active {
     transform: translateY(0);
 }
 
-
-/* ========================================
-   5. MAIN CONTENT
-   ======================================== */
-
+/* 5. MAIN CONTENT */
 main {
     width: 90%;
     max-width: 1200px;
@@ -116,11 +95,7 @@ main section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-
-/* ========================================
-   6. HEADINGS
-   ======================================== */
-
+/* 6. HEADINGS */
 h2 {
     color: #a83268;
     font-size: 1.8rem;
@@ -136,11 +111,7 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
-
-/* ========================================
-   7. PARAGRAPHS AND TEXT
-   ======================================== */
-
+/* 7. PARAGRAPHS AND TEXT */
 p {
     margin-bottom: 1rem;
     line-height: 1.7;
@@ -150,11 +121,7 @@ strong {
     color: #7a2451;
 }
 
-
-/* ========================================
-   8. HOME PAGE HERO IMAGE
-   ======================================== */
-
+/* 8. HOME PAGE HERO IMAGE */
 main section:first-child img {
     display: block;
     width: 100%;
@@ -164,11 +131,7 @@ main section:first-child img {
     border-radius: 0.8rem;
 }
 
-
-/* ========================================
-   9. LINKS AND BUTTON-STYLE LINKS
-   ======================================== */
-
+/* 9. LINKS AND BUTTON-STYLE LINKS */
 main a {
     display: inline-block;
     color: #ffffff;
@@ -178,8 +141,7 @@ main a {
     padding: 0.7rem 1.2rem;
     margin: 0.4rem 0.4rem 0.4rem 0;
     border-radius: 0.4rem;
-    transition: background-color 0.3s ease,
-                transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 main a:hover {
@@ -196,11 +158,7 @@ main a:active {
     transform: translateY(0);
 }
 
-
-/* ========================================
-   10. LISTS
-   ======================================== */
-
+/* 10. LISTS */
 ul {
     padding-left: 1.5rem;
 }
@@ -209,11 +167,7 @@ li {
     margin-bottom: 0.6rem;
 }
 
-
-/* ========================================
-   11. ARTICLES
-   ======================================== */
-
+/* 11. ARTICLES */
 article {
     background-color: #fff1f6;
     padding: 1.5rem;
@@ -223,11 +177,7 @@ article {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-
-/* ========================================
-   12. MENU LAYOUT
-   ======================================== */
-
+/* 12. MENU LAYOUT */
 main section:nth-child(2) article,
 main section:nth-child(3) article,
 main section:nth-child(4) article {
@@ -243,11 +193,7 @@ main section:nth-child(4) article:nth-child(3n) {
     margin-right: 0;
 }
 
-
-/* ========================================
-   13. FORMS
-   ======================================== */
-
+/* 13. FORMS */
 form {
     max-width: 700px;
     margin: 0 auto;
@@ -287,11 +233,7 @@ textarea {
     resize: vertical;
 }
 
-
-/* ========================================
-   14. FORM BUTTONS
-   ======================================== */
-
+/* 14. FORM BUTTONS */
 button {
     background-color: #a83268;
     color: #ffffff;
@@ -302,8 +244,7 @@ button {
     font-weight: 700;
     border-radius: 0.4rem;
     cursor: pointer;
-    transition: background-color 0.3s ease,
-                transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
@@ -320,11 +261,7 @@ button:active {
     transform: translateY(0);
 }
 
-
-/* ========================================
-   15. FOOTER
-   ======================================== */
-
+/* 15. FOOTER */
 footer {
     background-color: #7a2451;
     color: #ffffff;
@@ -337,11 +274,44 @@ footer p {
     margin-bottom: 0.5rem;
 }
 
+/* 16. FAQ ACCORDION */
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #e89ab8;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
 
-/* ========================================
-   16. TABLET RESPONSIVE DESIGN
-   ======================================== */
+.faq-question {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: #fff1f6;
+    color: #7a2451;
+    padding: 1rem;
+    border: none;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+.faq-question:hover {
+    background-color: #f7c6d9;
+    transform: none;
+}
+
+.faq-answer {
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.faq-answer p {
+    margin-bottom: 0;
+}
+
+/* 17. TABLET RESPONSIVE DESIGN */
 @media (max-width: 900px) {
 
     header {
@@ -387,14 +357,9 @@ footer p {
     main section:nth-child(4) article:nth-child(2n) {
         margin-right: 0;
     }
-
 }
 
-
-/* ========================================
-   17. MOBILE RESPONSIVE DESIGN
-   ======================================== */
-
+/* 18. MOBILE RESPONSIVE DESIGN */
 @media (max-width: 600px) {
 
     html {
@@ -478,13 +443,12 @@ footer p {
         padding: 1.5rem 4%;
     }
 
+    .faq-question {
+        padding: 0.85rem;
+    }
 }
 
-
-/* ========================================
-   18. SMALL MOBILE DEVICES
-   ======================================== */
-
+/* 19. SMALL MOBILE DEVICES */
 @media (max-width: 400px) {
 
     html {
@@ -506,5 +470,4 @@ footer p {
     h2 {
         font-size: 1.35rem;
     }
-
 }
