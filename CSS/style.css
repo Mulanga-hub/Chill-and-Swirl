@@ -311,7 +311,72 @@ footer p {
     margin-bottom: 0;
 }
 
-/* 17. TABLET RESPONSIVE DESIGN */
+/* 17. IMAGE GALLERY */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem auto;
+}
+
+.gallery-trigger {
+    padding: 0;
+    border: 3px solid #e89ab8;
+    border-radius: 0.8rem;
+    background: none;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+}
+
+.gallery-trigger img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-trigger:hover img {
+    transform: scale(1.05);
+}
+
+/* 18. LIGHTBOX */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border: 4px solid #ffffff;
+    border-radius: 0.5rem;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    background: none;
+    font-size: 2.5rem;
+    padding: 0.2rem 0.7rem;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    background-color: #a83268;
+    transform: none;
+}
+
+/* 19. TABLET RESPONSIVE DESIGN */
 @media (max-width: 900px) {
 
     header {
@@ -359,7 +424,7 @@ footer p {
     }
 }
 
-/* 18. MOBILE RESPONSIVE DESIGN */
+/* 20. MOBILE RESPONSIVE DESIGN */
 @media (max-width: 600px) {
 
     html {
@@ -446,9 +511,27 @@ footer p {
     .faq-question {
         padding: 0.85rem;
     }
+
+    .gallery-trigger {
+        max-width: 100%;
+    }
+
+    .lightbox {
+        padding: 1rem;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+        max-height: 75vh;
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 15px;
+    }
 }
 
-/* 19. SMALL MOBILE DEVICES */
+/* 21. SMALL MOBILE DEVICES */
 @media (max-width: 400px) {
 
     html {
