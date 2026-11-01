@@ -1,245 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
+// ========================================
+// CHILL & SWIRL ICE CREAM
+// PART 3 - JAVASCRIPT FUNCTIONALITY
+// ========================================
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore delicious ice cream flavours, cones, desserts and signature treats at Chill & Swirl Ice Cream in Pretoria.">
-    <title>Menu | Chill & Swirl Ice Cream</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
 
-<body>
+// ========================================
+// 1. FAQ ACCORDION
+// ========================================
 
-    <header>
-        <img src="images/graphics/chill-and-swirl-logo.png"
-             alt="Chill & Swirl Ice Cream logo">
+const faqQuestions = document.querySelectorAll(".faq-question");
 
-        <h1>Chill & Swirl Ice Cream</h1>
+faqQuestions.forEach(function (question) {
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="menu.html">Menu</a>
-            <a href="inquiry.html">Inquiry</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    question.addEventListener("click", function () {
 
-    <main>
+        const answerId = question.getAttribute("aria-controls");
+        const answer = document.getElementById(answerId);
 
-        <section>
-            <h2>Our Menu</h2>
+        const isExpanded =
+            question.getAttribute("aria-expanded") === "true";
 
-            <p>
-                Explore our delicious selection of ice cream flavours,
-                desserts and signature treats. We offer affordable options
-                starting from R15.
-            </p>
-        </section>
+        question.setAttribute("aria-expanded", !isExpanded);
 
-        <!-- Interactive image gallery -->
-        <section>
-            <h2>Our Ice Cream Gallery</h2>
+        if (answer) {
+            answer.hidden = isExpanded;
+        }
 
-            <p>
-                Take a closer look at one of our Chill & Swirl creations.
-                Click the image to view it in a larger size.
-            </p>
+    });
 
-            <div class="gallery">
-                <button type="button"
-                        class="gallery-trigger"
-                        id="openLightbox"
-                        aria-label="View Chill and Swirl ice cream image">
+});
 
-                    <img src="images/products/chill-and-swirl-hero.png"
-                         alt="Chill & Swirl signature ice cream creation">
-                </button>
-            </div>
-        </section>
 
-        <!-- Product search -->
-        <section>
-            <h2>Find Your Favourite Treat</h2>
+// ========================================
+// 2. IMAGE GALLERY LIGHTBOX
+// ========================================
 
-            <label for="menuSearch">Search our menu:</label>
+const openLightboxButton =
+    document.getElementById("openLightbox");
 
-            <input type="search"
-                   id="menuSearch"
-                   placeholder="Search ice cream, cones or desserts..."
-                   aria-label="Search menu products">
+const imageLightbox =
+    document.getElementById("imageLightbox");
 
-            <p id="noSearchResults" hidden>
-                Sorry, no matching products were found.
-            </p>
-        </section>
+const closeLightboxButton =
+    document.getElementById("closeLightbox");
 
-        <!-- Ice Cream Flavours -->
-        <section>
-            <h2>Ice Cream Flavours</h2>
 
-            <article class="menu-item">
-                <h3>Vanilla</h3>
-                <p>Classic creamy vanilla ice cream.</p>
-                <p><strong>From R15</strong></p>
-            </article>
+if (openLightboxButton && imageLightbox && closeLightboxButton) {
 
-            <article class="menu-item">
-                <h3>Chocolate</h3>
-                <p>Rich and creamy chocolate ice cream.</p>
-                <p><strong>From R15</strong></p>
-            </article>
+    openLightboxButton.addEventListener("click", function () {
 
-            <article class="menu-item">
-                <h3>Strawberry</h3>
-                <p>A refreshing strawberry-flavoured favourite.</p>
-                <p><strong>From R15</strong></p>
-            </article>
+        imageLightbox.hidden = false;
+        closeLightboxButton.focus();
 
-            <article class="menu-item">
-                <h3>Cookies & Cream</h3>
-                <p>Creamy ice cream with crunchy cookie pieces.</p>
-                <p><strong>From R20</strong></p>
-            </article>
+    });
 
-            <article class="menu-item">
-                <h3>Oreo Swirl</h3>
-                <p>Cookies, cream and chocolate blended together.</p>
-                <p><strong>From R20</strong></p>
-            </article>
+    closeLightboxButton.addEventListener("click", function () {
 
-            <article class="menu-item">
-                <h3>Chill & Swirl Special</h3>
-                <p>
-                    Our unique signature flavour combining creamy chocolate
-                    ice cream, strawberry swirl, cookie pieces and a
-                    caramel finish.
-                </p>
-                <p><strong>From R25</strong></p>
-            </article>
-        </section>
+        imageLightbox.hidden = true;
+        openLightboxButton.focus();
 
-        <!-- Cones and Cups -->
-        <section>
-            <h2>Cones & Cups</h2>
+    });
 
-            <article class="menu-item">
-                <h3>Classic Ice Cream Cone</h3>
-                <p>One scoop of your favourite flavour in a crispy cone.</p>
-                <p><strong>R15</strong></p>
-            </article>
+    imageLightbox.addEventListener("click", function (event) {
 
-            <article class="menu-item">
-                <h3>Double Scoop Cone</h3>
-                <p>Two scoops of your favourite flavours.</p>
-                <p><strong>R25</strong></p>
-            </article>
+        if (event.target === imageLightbox) {
 
-            <article class="menu-item">
-                <h3>Ice Cream Cup</h3>
-                <p>A convenient cup with your choice of flavours.</p>
-                <p><strong>From R20</strong></p>
-            </article>
-        </section>
+            imageLightbox.hidden = true;
+            openLightboxButton.focus();
 
-        <!-- Desserts -->
-        <section>
-            <h2>Special Desserts</h2>
+        }
 
-            <article class="menu-item">
-                <h3>Sundae</h3>
-                <p>Ice cream topped with delicious sauces and toppings.</p>
-                <p><strong>From R30</strong></p>
-            </article>
+    });
 
-            <article class="menu-item">
-                <h3>Ice Cream Milkshake</h3>
-                <p>
-                    A thick and creamy milkshake made with your favourite
-                    Chill & Swirl flavour.
-                </p>
-                <p><strong>From R35</strong></p>
-            </article>
+    document.addEventListener("keydown", function (event) {
 
-            <article class="menu-item">
-                <h3>Ice Cream Waffle</h3>
-                <p>Warm waffle served with creamy ice cream and toppings.</p>
-                <p><strong>From R40</strong></p>
-            </article>
+        if (event.key === "Escape" && !imageLightbox.hidden) {
 
-            <article class="menu-item">
-                <h3>Ice Cream Sandwich</h3>
-                <p>Delicious ice cream served between sweet biscuit layers.</p>
-                <p><strong>From R35</strong></p>
-            </article>
-        </section>
+            imageLightbox.hidden = true;
+            openLightboxButton.focus();
 
-        <!-- Signature Product -->
-        <section>
-            <h2>⭐ Our Signature Product ⭐</h2>
+        }
 
-            <article class="menu-item">
-                <h3>Chill & Swirl Chocolate Croissant</h3>
-                <p>
-                    A warm, freshly heated croissant filled with creamy
-                    chocolate ice cream. The combination of the warm pastry
-                    and cold ice cream creates a unique Chill & Swirl
-                    experience.
-                </p>
-                <p><strong>Price: R45</strong></p>
-            </article>
-        </section>
+    });
 
-        <!-- Sharing Treat -->
-        <section>
-            <h2>Chill & Swirl Sharing Treat</h2>
+}
 
-            <article class="menu-item">
-                <p>
-                    Our largest ice cream creation, made for sharing between
-                    two people. It includes multiple scoops, toppings, sauces
-                    and our signature flavours.
-                </p>
-                <p><strong>Price: R100</strong></p>
-            </article>
-        </section>
 
-        <!-- Ordering -->
-        <section>
-            <h2>Want to Order?</h2>
+// ========================================
+// 3. MENU PRODUCT SEARCH
+// ========================================
 
-            <p>
-                For product enquiries, availability or special requests,
-                contact our team through the inquiry page.
-            </p>
+const menuSearch = document.getElementById("menuSearch");
 
-            <a href="inquiry.html">Make an Inquiry</a>
-        </section>
+const menuItems = document.querySelectorAll(".menu-item");
 
-    </main>
+const noSearchResults =
+    document.getElementById("noSearchResults");
 
-    <!-- Image lightbox -->
-    <div id="imageLightbox" class="lightbox" hidden>
 
-        <button type="button"
-                id="closeLightbox"
-                class="lightbox-close"
-                aria-label="Close image">
-            &times;
-        </button>
+if (menuSearch && menuItems.length > 0) {
 
-        <img src="images/products/chill-and-swirl-hero.png"
-             alt="Enlarged view of the Chill & Swirl ice cream creation">
+    menuSearch.addEventListener("input", function () {
 
-    </div>
+        const searchText = menuSearch.value.toLowerCase().trim();
 
-    <footer>
-        <p>&copy; 2026 Chill & Swirl Ice Cream. All rights reserved.</p>
-        <p>Instagram | TikTok</p>
-    </footer>
+        let matchingItems = 0;
 
-    <script src="JS/script.js"></script>
+        menuItems.forEach(function (item) {
 
-</body>
-</html>
+            const productText = item.textContent.toLowerCase();
+
+            if (productText.includes(searchText)) {
+
+                item.hidden = false;
+                matchingItems++;
+
+            } else {
+
+                item.hidden = true;
+
+            }
+
+        });
+
+        if (noSearchResults) {
+            noSearchResults.hidden = matchingItems !== 0;
+        }
+
+    });
+
+
+    // Scroll to the matching product when Enter is pressed
+
+    menuSearch.addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            const searchText = menuSearch.value.toLowerCase().trim();
+
+            const matchingItem = Array.from(menuItems).find(function (item) {
+
+                return item.textContent.toLowerCase().includes(searchText);
+
+            });
+
+            if (matchingItem) {
+
+                matchingItem.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+                matchingItem.style.outline = "3px solid #ff69b4";
+
+                setTimeout(function () {
+                    matchingItem.style.outline = "";
+                }, 2500);
+
+            }
+
+        }
+
+    });
+
+}
+
+
+// ========================================
+// 4. WEBSITE CONFIRMATION
+// ========================================
+
+console.log("Chill & Swirl JavaScript loaded successfully.");
