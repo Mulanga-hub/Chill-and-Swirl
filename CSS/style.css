@@ -1,8 +1,8 @@
-```css
 /* ========================================
    CHILL & SWIRL ICE CREAM
    Part 3 - CSS Styling and Responsive Design
    ======================================== */
+
 
 /* 1. CSS RESET */
 * {
@@ -10,6 +10,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 
 /* 2. BASE STYLES */
 html {
@@ -24,6 +25,7 @@ body {
     color: #333333;
     background-color: #fff8fc;
 }
+
 
 /* 3. HEADER */
 header {
@@ -46,6 +48,7 @@ header h1 {
     letter-spacing: 0.05rem;
     margin-bottom: 1rem;
 }
+
 
 /* 4. NAVIGATION */
 nav {
@@ -80,6 +83,7 @@ nav a:active {
     transform: translateY(0);
 }
 
+
 /* 5. MAIN CONTENT */
 main {
     width: 90%;
@@ -95,6 +99,7 @@ main section {
     border-radius: 0.8rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
 
 /* 6. HEADINGS */
 h2 {
@@ -112,6 +117,7 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
+
 /* 7. PARAGRAPHS AND TEXT */
 p {
     margin-bottom: 1rem;
@@ -122,6 +128,7 @@ strong {
     color: #7a2451;
 }
 
+
 /* 8. HOME PAGE HERO IMAGE */
 main section:first-child img {
     display: block;
@@ -131,6 +138,7 @@ main section:first-child img {
     margin: 1.5rem auto;
     border-radius: 0.8rem;
 }
+
 
 /* 9. LINKS AND BUTTON-STYLE LINKS */
 main a {
@@ -159,6 +167,7 @@ main a:active {
     transform: translateY(0);
 }
 
+
 /* 10. LISTS */
 ul {
     padding-left: 1.5rem;
@@ -167,6 +176,7 @@ ul {
 li {
     margin-bottom: 0.6rem;
 }
+
 
 /* 11. ARTICLES */
 article {
@@ -177,6 +187,7 @@ article {
     border-radius: 0.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
+
 
 /* 12. MENU LAYOUT */
 main section:nth-child(2) article,
@@ -193,6 +204,7 @@ main section:nth-child(3) article:nth-child(3n),
 main section:nth-child(4) article:nth-child(3n) {
     margin-right: 0;
 }
+
 
 /* 13. FORMS */
 form {
@@ -234,6 +246,7 @@ textarea {
     resize: vertical;
 }
 
+
 /* 14. FORM BUTTONS */
 button {
     background-color: #a83268;
@@ -262,6 +275,7 @@ button:active {
     transform: translateY(0);
 }
 
+
 /* 15. FOOTER */
 footer {
     background-color: #7a2451;
@@ -274,6 +288,7 @@ footer {
 footer p {
     margin-bottom: 0.5rem;
 }
+
 
 /* 16. FAQ ACCORDION */
 .faq-item {
@@ -312,6 +327,7 @@ footer p {
     margin-bottom: 0;
 }
 
+
 /* 17. IMAGE GALLERY */
 .gallery {
     display: flex;
@@ -341,9 +357,8 @@ footer p {
     transform: scale(1.05);
 }
 
-/* 18. LIGHTBOX */
 
-/* IMPORTANT: Keep the lightbox hidden until JavaScript opens it */
+/* 18. LIGHTBOX */
 .lightbox[hidden] {
     display: none !important;
 }
@@ -383,7 +398,26 @@ footer p {
     transform: none;
 }
 
-/* 19. TABLET RESPONSIVE DESIGN */
+
+/* 19. GOOGLE MAPS */
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    border: 2px solid #e89ab8;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+
+/* 20. TABLET RESPONSIVE DESIGN */
 @media (max-width: 900px) {
 
     header {
@@ -431,7 +465,8 @@ footer p {
     }
 }
 
-/* 20. MOBILE RESPONSIVE DESIGN */
+
+/* 21. MOBILE RESPONSIVE DESIGN */
 @media (max-width: 600px) {
 
     html {
@@ -536,9 +571,14 @@ footer p {
         top: 10px;
         right: 15px;
     }
+
+    .map-container {
+        height: 350px;
+    }
 }
 
-/* 21. SMALL MOBILE DEVICES */
+
+/* 22. SMALL MOBILE DEVICES */
 @media (max-width: 400px) {
 
     html {
@@ -560,18 +600,4 @@ footer p {
     h2 {
         font-size: 1.35rem;
     }
-}
-```
-/* ========================================
-   INTERACTIVE LOCATION MAP
-======================================== */
-
-#locationMap {
-    width: 100%;
-    height: 400px;
-    min-height: 400px;
-    margin: 20px 0;
-    border: 2px solid #ff69b4;
-    border-radius: 12px;
-    z-index: 1;
 }
