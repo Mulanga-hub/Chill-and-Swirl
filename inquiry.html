@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inquiry | Chill & Swirl Ice Cream</title>
+
+    <title>Make an Inquiry | Chill & Swirl Ice Cream</title>
+
+    <meta name="description" content="Contact Chill & Swirl Ice Cream to ask about our ice cream products, orders, availability, parties and special requests in Pretoria.">
+
+    <meta name="keywords" content="Chill and Swirl, ice cream inquiry, ice cream orders, Pretoria ice cream, product availability">
+
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
@@ -49,31 +55,40 @@
         <section>
             <h2>Inquiry Form</h2>
 
-            <form action="#" method="post">
+            <form id="inquiryForm" action="#" method="post">
 
                 <!-- Customer name -->
                 <label for="name">Full Name:</label>
+
                 <input type="text"
                        id="name"
                        name="name"
+                       placeholder="Enter your full name"
+                       minlength="2"
                        required>
 
                 <br><br>
 
                 <!-- Email -->
                 <label for="email">Email Address:</label>
+
                 <input type="email"
                        id="email"
                        name="email"
+                       placeholder="example@email.com"
                        required>
 
                 <br><br>
 
                 <!-- Telephone -->
                 <label for="phone">Telephone Number:</label>
+
                 <input type="tel"
                        id="phone"
                        name="phone"
+                       placeholder="e.g. 0712345678"
+                       pattern="(\+27|0)[6-8][0-9]{8}"
+                       title="Enter a valid South African mobile number, for example 0712345678 or +27712345678."
                        required>
 
                 <br><br>
@@ -99,8 +114,7 @@
                 <!-- Product -->
                 <label for="product">Product:</label>
 
-                <select id="product"
-                        name="product">
+                <select id="product" name="product">
 
                     <option value="">Select a product</option>
                     <option value="ice-cream">Ice Cream</option>
@@ -110,9 +124,7 @@
                     <option value="milkshake">Milkshake</option>
                     <option value="waffle">Ice Cream Waffle</option>
                     <option value="sandwich">Ice Cream Sandwich</option>
-                    <option value="croissant">
-                        Chill & Swirl Chocolate Croissant
-                    </option>
+                    <option value="croissant">Chill & Swirl Chocolate Croissant</option>
                     <option value="sharing-treat">Sharing Treat</option>
 
                 </select>
@@ -127,7 +139,8 @@
                        name="quantity"
                        min="1"
                        max="5"
-                       value="1">
+                       value="1"
+                       required>
 
                 <br><br>
 
@@ -142,7 +155,9 @@
                           name="message"
                           rows="6"
                           cols="40"
-                          placeholder="Enter your question or special request here..."></textarea>
+                          minlength="5"
+                          placeholder="Enter your question or special request here..."
+                          required></textarea>
 
                 <br><br>
 
@@ -150,6 +165,9 @@
                 <button type="submit">Submit Inquiry</button>
 
             </form>
+
+            <!-- Response message will appear here -->
+            <div id="inquiryResponse" role="status" aria-live="polite"></div>
 
         </section>
 
@@ -167,6 +185,8 @@
         </p>
 
     </footer>
+
+    <script src="JS/script.js"></script>
 
 </body>
 
