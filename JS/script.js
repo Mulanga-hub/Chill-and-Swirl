@@ -17,11 +17,14 @@ faqQuestions.forEach(function (question) {
         const answerId = question.getAttribute("aria-controls");
         const answer = document.getElementById(answerId);
 
-        const isExpanded = question.getAttribute("aria-expanded") === "true";
+        const isExpanded =
+            question.getAttribute("aria-expanded") === "true";
 
         question.setAttribute("aria-expanded", !isExpanded);
 
-        answer.hidden = isExpanded;
+        if (answer) {
+            answer.hidden = isExpanded;
+        }
 
     });
 
@@ -32,37 +35,42 @@ faqQuestions.forEach(function (question) {
 // 2. IMAGE GALLERY LIGHTBOX
 // ========================================
 
-const openLightboxButton = document.getElementById("openLightbox");
-const imageLightbox = document.getElementById("imageLightbox");
-const closeLightboxButton = document.getElementById("closeLightbox");
+const openLightboxButton =
+    document.getElementById("openLightbox");
+
+const imageLightbox =
+    document.getElementById("imageLightbox");
+
+const closeLightboxButton =
+    document.getElementById("closeLightbox");
 
 
 if (openLightboxButton && imageLightbox && closeLightboxButton) {
 
-    // Open the lightbox when the gallery image is clicked
     openLightboxButton.addEventListener("click", function () {
 
         imageLightbox.hidden = false;
+
         closeLightboxButton.focus();
 
     });
 
 
-    // Close the lightbox using the close button
     closeLightboxButton.addEventListener("click", function () {
 
         imageLightbox.hidden = true;
+
         openLightboxButton.focus();
 
     });
 
 
-    // Close the lightbox when the background is clicked
     imageLightbox.addEventListener("click", function (event) {
 
         if (event.target === imageLightbox) {
 
             imageLightbox.hidden = true;
+
             openLightboxButton.focus();
 
         }
@@ -70,12 +78,12 @@ if (openLightboxButton && imageLightbox && closeLightboxButton) {
     });
 
 
-    // Close the lightbox when Escape is pressed
     document.addEventListener("keydown", function (event) {
 
         if (event.key === "Escape" && !imageLightbox.hidden) {
 
             imageLightbox.hidden = true;
+
             openLightboxButton.focus();
 
         }
@@ -86,7 +94,57 @@ if (openLightboxButton && imageLightbox && closeLightboxButton) {
 
 
 // ========================================
-// 3. WEBSITE CONFIRMATION
+// 3. MENU PRODUCT SEARCH
+// ========================================
+
+const menuSearch = document.getElementById("menuSearch");
+
+const menuItems = document.querySelectorAll(".menu-item");
+
+const noSearchResults =
+    document.getElementById("noSearchResults");
+
+
+if (menuSearch && menuItems.length > 0) {
+
+    menuSearch.addEventListener("input", function () {
+
+        const searchText = menuSearch.value.toLowerCase().trim();
+
+        let matchingItems = 0;
+
+        menuItems.forEach(function (item) {
+
+            const productText = item.textContent.toLowerCase();
+
+            if (productText.includes(searchText)) {
+
+                item.hidden = false;
+
+                matchingItems++;
+
+            } else {
+
+                item.hidden = true;
+
+            }
+
+        });
+
+
+        if (noSearchResults) {
+
+            noSearchResults.hidden = matchingItems !== 0;
+
+        }
+
+    });
+
+}
+
+
+// ========================================
+// 4. WEBSITE CONFIRMATION
 // ========================================
 
 console.log("Chill & Swirl JavaScript loaded successfully.");
