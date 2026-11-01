@@ -184,7 +184,6 @@ if (inquiryForm && inquiryResponse) {
 
         event.preventDefault();
 
-        // Check whether all required fields are valid
         if (!inquiryForm.checkValidity()) {
 
             inquiryForm.reportValidity();
@@ -192,7 +191,6 @@ if (inquiryForm && inquiryResponse) {
 
         }
 
-        // Collect customer information
         const customerName =
             document.getElementById("name").value.trim();
 
@@ -205,7 +203,6 @@ if (inquiryForm && inquiryResponse) {
         const quantity =
             document.getElementById("quantity").value;
 
-        // Prepare a response based on the inquiry type
         let responseMessage = "";
 
         switch (inquiryType) {
@@ -240,17 +237,14 @@ if (inquiryForm && inquiryResponse) {
                     "Thank you for contacting Chill & Swirl Ice Cream.";
         }
 
-        // Display the customer's response
         inquiryResponse.textContent =
             "Thank you, " + customerName + "! " +
             responseMessage +
             (product ? " Selected product: " + product + "." : "") +
             " Quantity: " + quantity + ".";
 
-        // Reset the form after successful submission
         inquiryForm.reset();
 
-        // Bring the response into view
         inquiryResponse.scrollIntoView({
             behavior: "smooth",
             block: "center"
@@ -262,7 +256,78 @@ if (inquiryForm && inquiryResponse) {
 
 
 // ========================================
-// 5. WEBSITE CONFIRMATION
+// 5. CONTACT FORM VALIDATION AND EMAIL
+// ========================================
+
+const contactForm = document.getElementById("contactForm");
+
+const contactResponse =
+    document.getElementById("contactResponse");
+
+
+if (contactForm && contactResponse) {
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        // Validate the contact form
+        if (!contactForm.checkValidity()) {
+
+            contactForm.reportValidity();
+            return;
+
+        }
+
+        // Collect customer information
+        const customerName =
+            document.getElementById("contact-name").value.trim();
+
+        const customerEmail =
+            document.getElementById("contact-email").value.trim();
+
+        const customerPhone =
+            document.getElementById("contact-phone").value.trim();
+
+        const messageType =
+            document.getElementById("message-type").value;
+
+        const customerMessage =
+            document.getElementById("contact-message").value.trim();
+
+        // Create the email subject
+        const emailSubject =
+            "Website Contact Form - " + messageType;
+
+        // Compile the customer's information into an email
+        const emailBody =
+            "Customer Name: " + customerName + "\n" +
+            "Email Address: " + customerEmail + "\n" +
+            "Telephone Number: " + (customerPhone || "Not provided") + "\n" +
+            "Message Type: " + messageType + "\n\n" +
+            "Message:\n" + customerMessage;
+
+        // Prepare the email
+        const emailLink =
+            "mailto:info@chillandswirl.co.za" +
+            "?subject=" + encodeURIComponent(emailSubject) +
+            "&body=" + encodeURIComponent(emailBody);
+
+        // Display confirmation
+        contactResponse.textContent =
+            "Thank you, " + customerName +
+            "! Your message has been prepared. Your email application will open so you can send it to Chill & Swirl Ice Cream.";
+
+        // Open the customer's email application
+        window.location.href = emailLink;
+
+    });
+
+}
+
+
+// ========================================
+// 6. WEBSITE CONFIRMATION
 // ========================================
 
 console.log("Chill & Swirl JavaScript loaded successfully.");
