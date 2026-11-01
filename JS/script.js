@@ -169,46 +169,94 @@ if (menuSearch && menuItems.length > 0) {
 
 
 // ========================================
-// 4. INTERACTIVE LOCATION MAP
+// 4. INQUIRY FORM VALIDATION AND RESPONSE
 // ========================================
 
-const mapElement = document.getElementById("locationMap");
+const inquiryForm = document.getElementById("inquiryForm");
 
-if (mapElement && typeof L !== "undefined") {
+const inquiryResponse =
+    document.getElementById("inquiryResponse");
 
-    // Create the map centred between the two areas
-    const locationMap = L.map("locationMap").setView(
-        [-25.7535, 28.2270],
-        14
-    );
 
-    // Add OpenStreetMap tiles
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(locationMap);
+if (inquiryForm && inquiryResponse) {
 
-    // Approximate Pretoria Central area marker
-    const pretoriaMarker = L.marker([-25.7479, 28.2293])
-        .addTo(locationMap);
+    inquiryForm.addEventListener("submit", function (event) {
 
-    pretoriaMarker.bindPopup(
-        "<strong>Chill & Swirl Ice Cream</strong><br>Pretoria Central<br>Approximate area"
-    );
+        event.preventDefault();
 
-    // Approximate Sunnyside area marker
-    const sunnysideMarker = L.marker([-25.7585, 28.2250])
-        .addTo(locationMap);
+        // Check whether all required fields are valid
+        if (!inquiryForm.checkValidity()) {
 
-    sunnysideMarker.bindPopup(
-        "<strong>Chill & Swirl Ice Cream</strong><br>Sunnyside<br>Approximate area"
-    );
+            inquiryForm.reportValidity();
+            return;
 
-    // Display both locations when the map loads
-    pretoriaMarker.openPopup();
+        }
 
-} else if (mapElement) {
+        // Collect customer information
+        const customerName =
+            document.getElementById("name").value.trim();
 
-    console.error("Leaflet could not load. Please check your internet connection.");
+        const inquiryType =
+            document.getElementById("inquiry-type").value;
+
+        const product =
+            document.getElementById("product").value;
+
+        const quantity =
+            document.getElementById("quantity").value;
+
+        // Prepare a response based on the inquiry type
+        let responseMessage = "";
+
+        switch (inquiryType) {
+
+            case "general":
+                responseMessage =
+                    "Thank you for your question. Our team will be happy to assist you with more information about Chill & Swirl Ice Cream.";
+                break;
+
+            case "order":
+                responseMessage =
+                    "Thank you for your order inquiry. Our team will review your selected product and quantity and assist you with the ordering process.";
+                break;
+
+            case "availability":
+                responseMessage =
+                    "Thank you for checking product availability. Please contact our team to confirm whether your selected product is currently available.";
+                break;
+
+            case "event":
+                responseMessage =
+                    "Thank you for considering Chill & Swirl Ice Cream for your event. Our team will assist you with available options and pricing.";
+                break;
+
+            case "special-request":
+                responseMessage =
+                    "Thank you for your special request. Our team will review your requirements and assist you where possible.";
+                break;
+
+            default:
+                responseMessage =
+                    "Thank you for contacting Chill & Swirl Ice Cream.";
+        }
+
+        // Display the customer's response
+        inquiryResponse.textContent =
+            "Thank you, " + customerName + "! " +
+            responseMessage +
+            (product ? " Selected product: " + product + "." : "") +
+            " Quantity: " + quantity + ".";
+
+        // Reset the form after successful submission
+        inquiryForm.reset();
+
+        // Bring the response into view
+        inquiryResponse.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    });
 
 }
 
