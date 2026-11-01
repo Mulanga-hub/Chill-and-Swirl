@@ -4,8 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contact Chill & Swirl Ice Cream in Pretoria Central and Sunnyside for product enquiries, feedback and special requests.">
+
     <title>Contact Us | Chill & Swirl Ice Cream</title>
+
     <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Leaflet map styling -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin="">
 </head>
 
 <body>
@@ -13,7 +23,6 @@
     <!-- Header -->
     <header>
 
-        <!-- Chill & Swirl logo -->
         <img src="images/graphics/chill-and-swirl-logo.png"
              alt="Chill & Swirl Ice Cream logo">
 
@@ -30,6 +39,7 @@
 
     </header>
 
+
     <!-- Main content -->
     <main>
 
@@ -43,6 +53,7 @@
                 special requests or information about our stores.
             </p>
         </section>
+
 
         <!-- Main location -->
         <section>
@@ -58,6 +69,7 @@
             </p>
         </section>
 
+
         <!-- Second location -->
         <section>
             <h2>Our Second Location</h2>
@@ -71,6 +83,7 @@
                 South Africa
             </p>
         </section>
+
 
         <!-- Business information -->
         <section>
@@ -100,6 +113,7 @@
             </p>
         </section>
 
+
         <!-- Social media -->
         <section>
             <h2>Follow Us</h2>
@@ -109,25 +123,33 @@
                 promotions and updates.
             </p>
 
-            <p>
-                Instagram | TikTok
-            </p>
+            <p>Instagram | TikTok</p>
         </section>
 
-        <!-- Map -->
+
+        <!-- Interactive map -->
         <section>
+
             <h2>Find Us</h2>
 
             <p>
-                Our website will provide a map showing both Chill & Swirl
-                store locations.
+                Explore the map below to view the approximate areas
+                served by our two Chill & Swirl locations.
             </p>
 
-            <!-- Map placeholder -->
+            <div id="locationMap"
+                 role="application"
+                 aria-label="Interactive map showing Pretoria Central and Sunnyside">
+
+            </div>
+
             <p>
-                <strong>Location Map:</strong> Pretoria Central and Sunnyside
+                <strong>Our locations:</strong>
+                Pretoria Central and Sunnyside, Pretoria.
             </p>
+
         </section>
+
 
         <!-- Contact form -->
         <section>
@@ -136,6 +158,7 @@
             <form action="#" method="post">
 
                 <label for="contact-name">Full Name:</label>
+
                 <input type="text"
                        id="contact-name"
                        name="contact-name"
@@ -144,6 +167,7 @@
                 <br><br>
 
                 <label for="contact-email">Email Address:</label>
+
                 <input type="email"
                        id="contact-email"
                        name="contact-email"
@@ -152,6 +176,7 @@
                 <br><br>
 
                 <label for="contact-phone">Telephone Number:</label>
+
                 <input type="tel"
                        id="contact-phone"
                        name="contact-phone">
@@ -166,7 +191,8 @@
                           name="contact-message"
                           rows="6"
                           cols="40"
-                          placeholder="Enter your message here..."></textarea>
+                          placeholder="Enter your message here..."
+                          required></textarea>
 
                 <br><br>
 
@@ -177,6 +203,7 @@
 
     </main>
 
+
     <!-- Footer -->
     <footer>
 
@@ -184,11 +211,19 @@
             &copy; 2026 Chill & Swirl Ice Cream. All rights reserved.
         </p>
 
-        <p>
-            Instagram | TikTok
-        </p>
+        <p>Instagram | TikTok</p>
 
     </footer>
+
+
+    <!-- Leaflet JavaScript library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin="">
+    </script>
+
+    <!-- Website JavaScript -->
+    <script src="JS/script.js"></script>
 
 </body>
 
