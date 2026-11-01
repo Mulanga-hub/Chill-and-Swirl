@@ -50,40 +50,33 @@ if (openLightboxButton && imageLightbox && closeLightboxButton) {
     openLightboxButton.addEventListener("click", function () {
 
         imageLightbox.hidden = false;
-
         closeLightboxButton.focus();
 
     });
 
-
     closeLightboxButton.addEventListener("click", function () {
 
         imageLightbox.hidden = true;
-
         openLightboxButton.focus();
 
     });
-
 
     imageLightbox.addEventListener("click", function (event) {
 
         if (event.target === imageLightbox) {
 
             imageLightbox.hidden = true;
-
             openLightboxButton.focus();
 
         }
 
     });
 
-
     document.addEventListener("keydown", function (event) {
 
         if (event.key === "Escape" && !imageLightbox.hidden) {
 
             imageLightbox.hidden = true;
-
             openLightboxButton.focus();
 
         }
@@ -120,7 +113,6 @@ if (menuSearch && menuItems.length > 0) {
             if (productText.includes(searchText)) {
 
                 item.hidden = false;
-
                 matchingItems++;
 
             } else {
@@ -131,10 +123,43 @@ if (menuSearch && menuItems.length > 0) {
 
         });
 
-
         if (noSearchResults) {
-
             noSearchResults.hidden = matchingItems !== 0;
+        }
+
+    });
+
+
+    menuSearch.addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            const searchText = menuSearch.value.toLowerCase().trim();
+
+            const matchingItem = Array.from(menuItems).find(function (item) {
+
+                return item.textContent.toLowerCase().includes(searchText);
+
+            });
+
+            if (matchingItem) {
+
+                matchingItem.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+                matchingItem.style.outline = "3px solid #ff69b4";
+
+                setTimeout(function () {
+
+                    matchingItem.style.outline = "";
+
+                }, 2500);
+
+            }
 
         }
 
