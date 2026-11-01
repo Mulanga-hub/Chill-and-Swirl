@@ -160,18 +160,27 @@
 
             <h2>Send Us a Message</h2>
 
-            <form action="#" method="post">
+            <p>
+                Complete the form below to send us your feedback,
+                questions or general message.
+            </p>
 
+            <form id="contactForm">
+
+                <!-- Full name -->
                 <label for="contact-name">Full Name:</label>
 
                 <input type="text"
                        id="contact-name"
                        name="contact-name"
                        placeholder="Enter your full name"
+                       minlength="2"
                        required>
 
                 <br><br>
 
+
+                <!-- Email address -->
                 <label for="contact-email">Email Address:</label>
 
                 <input type="email"
@@ -182,16 +191,41 @@
 
                 <br><br>
 
+
+                <!-- Telephone number -->
                 <label for="contact-phone">Telephone Number:</label>
 
                 <input type="tel"
                        id="contact-phone"
                        name="contact-phone"
-                       placeholder="Enter your telephone number">
+                       placeholder="e.g. 0712345678"
+                       pattern="(\+27|0)[6-8][0-9]{8}"
+                       title="Enter a valid South African mobile number, for example 0712345678 or +27712345678">
 
                 <br><br>
 
-                <label for="contact-message">Message:</label>
+
+                <!-- Message type -->
+                <label for="message-type">Message Type:</label>
+
+                <select id="message-type"
+                        name="message-type"
+                        required>
+
+                    <option value="">Select a message type</option>
+                    <option value="General Question">General Question</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Complaint">Complaint</option>
+                    <option value="Product Information">Product Information</option>
+                    <option value="Other">Other</option>
+
+                </select>
+
+                <br><br>
+
+
+                <!-- Message -->
+                <label for="contact-message">Full Message:</label>
 
                 <br>
 
@@ -199,14 +233,24 @@
                           name="contact-message"
                           rows="6"
                           cols="40"
+                          minlength="5"
                           placeholder="Enter your message here..."
                           required></textarea>
 
                 <br><br>
 
+
+                <!-- Submit button -->
                 <button type="submit">Send Message</button>
 
             </form>
+
+
+            <!-- Submission response -->
+            <div id="contactResponse"
+                 role="status"
+                 aria-live="polite">
+            </div>
 
         </section>
 
