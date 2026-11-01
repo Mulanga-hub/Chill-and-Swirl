@@ -169,7 +169,52 @@ if (menuSearch && menuItems.length > 0) {
 
 
 // ========================================
-// 4. WEBSITE CONFIRMATION
+// 4. INTERACTIVE LOCATION MAP
+// ========================================
+
+const mapElement = document.getElementById("locationMap");
+
+if (mapElement && typeof L !== "undefined") {
+
+    // Create the map centred between the two areas
+    const locationMap = L.map("locationMap").setView(
+        [-25.7535, 28.2270],
+        14
+    );
+
+    // Add OpenStreetMap tiles
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(locationMap);
+
+    // Approximate Pretoria Central area marker
+    const pretoriaMarker = L.marker([-25.7479, 28.2293])
+        .addTo(locationMap);
+
+    pretoriaMarker.bindPopup(
+        "<strong>Chill & Swirl Ice Cream</strong><br>Pretoria Central<br>Approximate area"
+    );
+
+    // Approximate Sunnyside area marker
+    const sunnysideMarker = L.marker([-25.7585, 28.2250])
+        .addTo(locationMap);
+
+    sunnysideMarker.bindPopup(
+        "<strong>Chill & Swirl Ice Cream</strong><br>Sunnyside<br>Approximate area"
+    );
+
+    // Display both locations when the map loads
+    pretoriaMarker.openPopup();
+
+} else if (mapElement) {
+
+    console.error("Leaflet could not load. Please check your internet connection.");
+
+}
+
+
+// ========================================
+// 5. WEBSITE CONFIRMATION
 // ========================================
 
 console.log("Chill & Swirl JavaScript loaded successfully.");
