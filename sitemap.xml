@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://YOUR-WEBSITE-URL/</loc>
+        <loc>https://ephemeral-centaur-eb6afb.netlify.app/index.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-WEBSITE-URL/about.html</loc>
+        <loc>https://ephemeral-centaur-eb6afb.netlify.app/about.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-WEBSITE-URL/menu.html</loc>
+        <loc>https://ephemeral-centaur-eb6afb.netlify.app/menu.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-WEBSITE-URL/inquiry.html</loc>
+        <loc>https://ephemeral-centaur-eb6afb.netlify.app/inquiry.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-WEBSITE-URL/contact.html</loc>
+        <loc>https://ephemeral-centaur-eb6afb.netlify.app/contact.html</loc>
     </url>
 
 </urlset>
