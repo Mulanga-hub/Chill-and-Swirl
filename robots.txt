@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-WEBSITE-URL/sitemap.xml
+Sitemap: https://ephemeral-centaur-eb6afb.netlify.app/sitemap.xml
