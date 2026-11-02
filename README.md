@@ -8,6 +8,8 @@ The website provides customers with information about the business, its products
 
 The main purpose of the project is to create an attractive, user-friendly and responsive website that represents the Chill & Swirl brand while demonstrating the practical application of HTML, CSS and JavaScript.
 
+**Live Website:** https://ephemeral-centaur-eb6afb.netlify.app
+
 ---
 
 ## 2. Project Overview
@@ -237,7 +239,9 @@ The form collects:
 
 The contact form uses HTML validation and JavaScript to collect and process the customer's information.
 
-When submitted, the website prepares an email addressed to the business using the customer's default email application. The customer can review the prepared message and send it.
+When submitted successfully, the website prepares an email addressed to the business using the customer's default email application. The customer can review the prepared message and send it manually.
+
+The form does not automatically send or store messages on a server.
 
 ### 8.4 Search Engine Optimisation (SEO)
 
@@ -253,6 +257,8 @@ The following techniques were applied:
 - Internal navigation links.
 - Responsive website styling.
 - Clear page content and organisation.
+- An XML sitemap.
+- A robots.txt file.
 
 ### 8.5 Form Validation
 
@@ -276,22 +282,32 @@ These features help prevent incomplete or incorrectly formatted submissions.
 The following technologies were used during development:
 
 ### HTML5
+
 Used to create the structure and content of the website.
 
 ### CSS3
+
 Used to style the website and create responsive layouts.
 
 ### JavaScript
+
 Used to introduce interactive features, search functionality, form validation and dynamic responses.
 
 ### Google Maps
+
 Used to provide an interactive map on the Contact page.
 
 ### Visual Studio Code
+
 Used as the development environment for creating and editing website files.
 
 ### Git and GitHub
+
 Used for source code management and tracking website development changes.
+
+### Netlify
+
+Used to deploy and publish the website online.
 
 ---
 
@@ -307,6 +323,8 @@ Chill-and-Swirl-Ice-Cream/
 ├── menu.html
 ├── inquiry.html
 ├── contact.html
+├── robots.txt
+├── sitemap.xml
 │
 ├── CSS/
 │   └── style.css
@@ -322,6 +340,7 @@ Chill-and-Swirl-Ice-Cream/
 ├── screenshots/
 │
 ├── README.md
+├── CHANGELOG.md
 │
 └── Proposal/
     └── Project proposal document
@@ -329,13 +348,15 @@ Chill-and-Swirl-Ice-Cream/
 
 The folder structure separates HTML pages, stylesheets, JavaScript files and images.
 
-The screenshots folder contains website development or presentation screenshots.
+The screenshots folder contains website development and presentation screenshots.
+
+The proposal folder contains the project proposal document.
 
 ---
 
 # 11. HOW TO RUN THE WEBSITE
 
-To view the Chill & Swirl Ice Cream website:
+To view the Chill & Swirl Ice Cream website locally:
 
 1. Download or clone the project repository.
 2. Extract the project folder if it was downloaded as a ZIP file.
@@ -420,37 +441,42 @@ The changelog records the main development activities and improvements made thro
 - Added contact form validation.
 - Implemented email preparation using a mailto link.
 - Added SEO titles, meta descriptions and keywords.
+- Created and updated the XML sitemap.
+- Created and updated the robots.txt file.
 - Improved image alternative text and website navigation.
+- Deployed the website using Netlify.
 - Updated website documentation and references.
 
 ---
 
 # 14. REFERENCES
 
-The following resources were consulted during the development of the Chill & Swirl Ice Cream website.
+The following online resources provide technical information and guidance relevant to the planning, development, functionality and optimisation of the Chill & Swirl Ice Cream website.
 
-### HTML and CSS
+### HTML and Web Development
 
-- MDN Web Docs – HTML.
-- MDN Web Docs – CSS.
-- MDN Web Docs – CSS Flexbox.
-- MDN Web Docs – CSS Media Queries.
-- MDN Web Docs – Responsive Design.
-- W3C – HTML and CSS Web Standards.
+- Mozilla Developer Network (MDN) (n.d.) *HTML: HyperText Markup Language*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML (Accessed: 2 November 2026).
+- Mozilla Developer Network (MDN) (n.d.) *HTML Forms*. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms (Accessed: 2 November 2026).
 
-### JavaScript
+### CSS and Responsive Design
 
-- MDN Web Docs – JavaScript.
-- MDN Web Docs – JavaScript DOM Manipulation.
-- MDN Web Docs – HTML Form Validation.
-- MDN Web Docs – JavaScript Events.
+- Mozilla Developer Network (MDN) (n.d.) *CSS: Cascading Style Sheets*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS (Accessed: 2 November 2026).
+- Mozilla Developer Network (MDN) (n.d.) *CSS Media Queries*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries (Accessed: 2 November 2026).
 
-### Maps and SEO
+### JavaScript and Form Validation
 
-- Google Maps – Maps Embed.
-- Google Search Central – SEO Starter Guide.
+- Mozilla Developer Network (MDN) (n.d.) *JavaScript*. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript (Accessed: 2 November 2026).
+- Mozilla Developer Network (MDN) (n.d.) *Client-side Form Validation*. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation (Accessed: 2 November 2026).
+- Mozilla Developer Network (MDN) (n.d.) *Document Object Model (DOM)*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model (Accessed: 2 November 2026).
 
-These resources were consulted to support website structure, styling, responsive design, JavaScript functionality, form validation, interactive maps and search engine optimisation.
+### Search Engine Optimisation
+
+- Google Search Central (n.d.) *SEO Starter Guide*. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 2 November 2026).
+
+### Maps and Website Deployment
+
+- Google Maps Platform (n.d.) *Maps Embed API*. Available at: https://developers.google.com/maps/documentation/embed/embedding-map (Accessed: 2 November 2026).
+- Netlify (n.d.) *Netlify Documentation*. Available at: https://docs.netlify.com/ (Accessed: 2 November 2026).
 
 ---
 
@@ -471,3 +497,5 @@ The project demonstrates the application of web development principles and the i
 **Development Technologies:** HTML5, CSS3 and JavaScript
 
 **Business Locations:** Pretoria Central and Sunnyside, Pretoria, South Africa.
+
+**Live Website:** https://ephemeral-centaur-eb6afb.netlify.app
