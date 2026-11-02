@@ -22,36 +22,53 @@ This document records the development, improvements and updates made to the Chil
 ## Part 3 – Functionality, Forms and SEO Improvements
 
 ### JavaScript Functionality
+
 - Added an interactive FAQ accordion.
 - Added an image gallery lightbox.
 - Added menu product search functionality.
-- Added JavaScript validation to the inquiry form.
-- Added dynamic inquiry responses based on the visitor's selections.
-- Added JavaScript validation to the contact form.
-- Added contact form processing that prepares an email with the visitor's details and message.
+- Added JavaScript validation to the Inquiry form.
+- Added dynamic inquiry responses based on visitor selections.
+- Added JavaScript validation to the Contact form.
+- Added contact form processing that prepares an email using the visitor's details and message.
 
 ### Forms
-- Improved the inquiry form with customer details, inquiry categories, product selection, quantity and message fields.
+
+- Improved the Inquiry form with customer details, inquiry categories, product selection, quantity and message fields.
 - Added validation to check required fields and input formats.
-- Improved the contact form with message categories and validation.
+- Improved the Contact form with message categories and validation.
 - Added email preparation using the visitor's submitted information.
 
 ### Location and Contact Information
+
 - Added an interactive Google Maps embed to the Contact page.
 - Included location information for Pretoria Central and Sunnyside.
 - Improved the presentation of business contact information and operating hours.
 
 ### SEO and Website Improvements
+
 - Added page-specific SEO information to support search engine visibility.
 - Improved page titles and meta descriptions.
 - Reviewed image descriptions and alternative text.
 - Improved the website's structure and navigation.
 - Updated responsive styling and the map container.
+- Created an XML sitemap to list the main website pages.
+- Created a robots.txt file to provide search engine crawling instructions.
+- Updated sitemap and robots.txt references with the deployed website URL.
+
+### Testing and Deployment
+
+- Tested website navigation and page accessibility.
+- Tested interactive JavaScript features.
+- Tested form validation and contact email preparation.
+- Checked the website on desktop, tablet and iPhone screen sizes.
+- Deployed the website using Netlify.
+- Verified the published website and its main interactive features.
 
 ### Documentation
+
 - Expanded the README file to document the project, technologies, website structure and improvements.
 - Created this separate changelog to record development updates.
-- Reviewed the project references and documentation.
+- Improved the project references and documentation.
 
 ## Notes
 
